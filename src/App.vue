@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" >
+    <da-header/>
+    <router-view class="bg-light"/>
+    <da-footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DaHeader from '@/components/DaHeader.vue'
+import DaFooter from '@/components/DaFooter.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DaHeader,
+    DaFooter
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  width: 100%;
+  background-color: rgb(206, 225, 233);
+  height: 100%;
+  
 }
 </style>
